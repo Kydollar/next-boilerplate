@@ -1,0 +1,10 @@
+{
+    "ignore": [
+        "postcss.config.mjs"
+    ],
+    "ignoreDependencies": [
+        "eslint-config-next",
+        "tailwindcss",
+        "tw-animate-css"
+    ]
+}

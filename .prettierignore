@@ -1,0 +1,10 @@
+dist/*
+.cache
+public
+node_modules
+*.esm.js
+*.tsbuildinfo
+.next/*
+out/*
+coverage/*
+*.lock

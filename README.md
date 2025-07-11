@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Boilerplate
 
-## Getting Started
+Boilerplate profesional untuk Next.js, React 19, TypeScript, TailwindCSS, dan CI/CD.
 
-First, run the development server:
+## Fitur
+
+- Next.js 15, React 19, TypeScript 5
+- TailwindCSS 4, Prettier, ESLint, Husky, lint-staged
+- Semantic Release otomatis (changelog, tag, publish)
+- Testing dengan Playwright
+- CI/CD dengan GitHub Actions
+- Dockerfile siap deploy
+
+## Pengembangan
+
+Untuk memulai, jalankan server pengembangan:
 
 ```bash
+npm install
 npm run dev
-# or
+# atau
 yarn dev
-# or
+# atau
 pnpm dev
-# or
+# atau
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Anda dapat mulai mengedit halaman dengan memodifikasi `app/page.tsx`. Halaman akan otomatis
+memperbarui saat Anda mengedit file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Testing
 
-## Learn More
+Untuk menjalankan pengujian, gunakan perintah berikut:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lint & Format
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Untuk memeriksa kesalahan dan memformat kode, jalankan:
 
-## Deploy on Vercel
+```bash
+npm run lint
+npm run format
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Release Otomatis
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push ke branch `main` akan otomatis membuat rilis baru.
+
+## Deployment
+
+Untuk membangun image Docker, gunakan perintah berikut:
+
+```bash
+docker build -t next-boilerplate .
+docker run -p 3000:3000 next-boilerplate
+```
+
+## Struktur Project
+
+- `src/` - Source code utama
+- `public/` - Static assets
+- `.github/workflows/ci.yml` - CI/CD
+- `Dockerfile` - Deployment
+
+## Kontribusi
+
+Pastikan commit mengikuti konvensi dan semua test/lint lolos sebelum push.
+
+Anda dapat mempelajari lebih lanjut tentang Next.js dengan melihat sumber daya berikut:
+
+- [Dokumentasi Next.js](https://nextjs.org/docs) - pelajari tentang fitur dan API Next.js.
+- [Belajar Next.js](https://nextjs.org/learn) - tutorial interaktif Next.js.
+
+Anda juga dapat mengunjungi [repository GitHub Next.js](https://github.com/vercel/next.js) - umpan
+balik dan kontribusi Anda sangat diharapkan!
+
+## Deploy di Vercel
+
+Cara termudah untuk menerapkan aplikasi Next.js Anda adalah dengan menggunakan
+[Platform Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+dari pencipta Next.js.
+
+Lihat dokumentasi kami tentang
+[penyebaran Next.js](https://nextjs.org/docs/app/building-your-application/deploying) untuk detail
+lebih lanjut.
