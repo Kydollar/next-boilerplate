@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Kydollar/next-boilerplate/compare/v1.0.0...v1.0.1) (2025-07-11)
+
+
+### Bug Fixes
+
+* remove test button ([03b5908](https://github.com/Kydollar/next-boilerplate/commit/03b5908d452f50e9f69e6d8e13b7ff1b5b2805a7))
+
 # 1.0.0 (2025-07-11)
 
 
