@@ -51,7 +51,7 @@
     "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "husky": "^8.0.3",
+    "husky": "^9.1.7",
     "knip": "^5.61.3",
     "lint-staged": "^16.1.2",
     "playwright": "^1.44.0",
