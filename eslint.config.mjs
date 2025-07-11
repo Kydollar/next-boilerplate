@@ -27,6 +27,7 @@ const eslintIgnore = [
   '*.min.js',
   '*.config.js',
   '*.config.mjs',
+  '*.config.ts',
   '*.d.ts',
   '*.tsbuildinfo',
 ];
