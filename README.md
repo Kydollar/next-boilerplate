@@ -1,91 +1,89 @@
-# Next Boilerplate
+# Next Boilerplate 🚀
 
-Boilerplate profesional untuk Next.js, React 19, TypeScript, TailwindCSS, dan CI/CD.
+A modern, professional, and super chill Next.js starter kit. Built with React 19, TypeScript, TailwindCSS, Playwright, and all the cool dev tools you need for serious projects or just having fun!
 
-## Fitur
+## Features
 
-- Next.js 15, React 19, TypeScript 5
-- TailwindCSS 4, Prettier, ESLint, Husky, lint-staged
-- Semantic Release otomatis (changelog, tag, publish)
-- Testing dengan Playwright
-- CI/CD dengan GitHub Actions
-- Dockerfile siap deploy
+- Next.js 15 + React 19 + TypeScript 5
+- TailwindCSS 4 for styling
+- Prettier & ESLint for clean code
+- Husky & lint-staged for commit hygiene
+- Automated releases with Semantic Release
+- End-to-end testing with Playwright
+- CI/CD ready (GitHub Actions)
+- Dockerfile for easy deployment
 
-## Pengembangan
+## Getting Started
 
-Untuk memulai, jalankan server pengembangan:
+Clone this repo, install dependencies, and start hacking:
 
 ```bash
 npm install
 npm run dev
-# atau
+# or
 yarn dev
-# atau
+# or
 pnpm dev
-# atau
+# or
 bun dev
 ```
 
-Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
-
-Anda dapat mulai mengedit halaman dengan memodifikasi `app/page.tsx`. Halaman akan otomatis
-memperbarui saat Anda mengedit file.
+Open [http://localhost:3000](http://localhost:3000) and see your app in action. Edit `src/app/page.tsx` and watch your changes go live instantly.
 
 ## Testing
 
-Untuk menjalankan pengujian, gunakan perintah berikut:
+Run all tests (unit & e2e):
 
 ```bash
-npm test
+npm test        # unit tests
+npm run e2e:headless  # e2e tests (Playwright)
 ```
 
 ## Lint & Format
 
-Untuk memeriksa kesalahan dan memformat kode, jalankan:
+Keep your code fresh:
 
 ```bash
 npm run lint
 npm run format
 ```
 
-## Release Otomatis
+## Auto Release
 
-Push ke branch `main` akan otomatis membuat rilis baru.
+Push to `main` and let Semantic Release handle changelogs, tags, and npm publish. No more manual releases!
 
-## Deployment
+## Deploy
 
-Untuk membangun image Docker, gunakan perintah berikut:
+Build a Docker image and ship it anywhere:
 
 ```bash
 docker build -t next-boilerplate .
 docker run -p 3000:3000 next-boilerplate
 ```
 
-## Struktur Project
+## Project Structure
 
-- `src/` - Source code utama
-- `public/` - Static assets
-- `.github/workflows/ci.yml` - CI/CD
-- `Dockerfile` - Deployment
+- `src/` — Your main app code
+- `public/` — Static assets
+- `.github/workflows/ci.yml` — CI/CD config
+- `Dockerfile` — Deployment config
 
-## Kontribusi
+## Contributing
 
-Pastikan commit mengikuti konvensi dan semua test/lint lolos sebelum push.
+PRs, issues, and feedback are always welcome! Just make sure your commits follow the convention and all tests/lints pass before pushing.
 
-Anda dapat mempelajari lebih lanjut tentang Next.js dengan melihat sumber daya berikut:
+## Learn More
 
-- [Dokumentasi Next.js](https://nextjs.org/docs) - pelajari tentang fitur dan API Next.js.
-- [Belajar Next.js](https://nextjs.org/learn) - tutorial interaktif Next.js.
+- [Next.js Docs](https://nextjs.org/docs) — All the features & APIs
+- [Next.js Learn](https://nextjs.org/learn) — Interactive tutorials
+- [Next.js GitHub](https://github.com/vercel/next.js) — Star & contribute!
 
-Anda juga dapat mengunjungi [repository GitHub Next.js](https://github.com/vercel/next.js) - umpan
-balik dan kontribusi Anda sangat diharapkan!
+## Deploy to Vercel
 
-## Deploy di Vercel
+The easiest way to go live is with [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) — the creators of Next.js.
 
-Cara termudah untuk menerapkan aplikasi Next.js Anda adalah dengan menggunakan
-[Platform Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-dari pencipta Next.js.
+Check out the [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-Lihat dokumentasi kami tentang
-[penyebaran Next.js](https://nextjs.org/docs/app/building-your-application/deploying) untuk detail
-lebih lanjut.
+---
+
+Hidup Jokowi!✨
