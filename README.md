@@ -8,7 +8,8 @@ A modern, professional, and super chill Next.js starter kit. Built with React 19
 - 🧠 [**TypeScript 5**](https://www.typescriptlang.org/docs/) with strict configs
 - 🎨 [**Tailwind CSS 4**](https://tailwindcss.com/docs) with [Prettier plugin](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 - 🧹 [**ESLint 9**](https://eslint.org/docs/latest/) + [**Prettier 3**](https://prettier.io/docs/en/index.html) + [**lint-staged**](https://github.com/okonet/lint-staged)
-- 🧪 [**Playwright**](https://playwright.dev/docs/intro) for end-to-end testing
+- ✅ [**Jest**](https://jestjs.io/) for unit testing with coverage reports
+- 🧪 [**Playwright**](https://playwright.dev/docs/intro) for end-to-end testing with UI mode and reporting
 - 🛡️ [**Husky**](https://typicode.github.io/husky) for pre-commit hooks
 - 🧼 [**knip**](https://knip.dev/docs) for unused dependencies check
 - 🚀 [**Semantic Release**](https://semantic-release.gitbook.io/semantic-release/) for automated changelogs, tagging, and GitHub Releases
@@ -34,11 +35,23 @@ Open [http://localhost:3000](http://localhost:3000) and see your app in action. 
 Run all tests (unit & e2e):
 
 ```bash
-# Run all E2E tests in headless mode
-npm run e2e:headless
+# Run unit tests with coverage
+npm run test
 
-# Or launch the Playwright UI
-npm run e2e:ui
+# Run unit tests in watch mode
+npm run test:watch
+
+# Run all E2E tests in headless mode
+npm run test:e2e
+
+# Run E2E tests in headed mode (shows the browser)
+npm run test:e2e:headed
+
+# Launch Playwright Test UI
+npm run test:e2e:ui
+
+# Show the latest Playwright HTML report
+npm run test:e2e:report
 ```
 
 ## 🧹 Lint & Format
