@@ -1,10 +1,19 @@
-dist/*
-.cache
-public
-node_modules
+# Build outputs
+dist/
+build/
+.next/
+out/
+coverage/
+.cache/
+.swc/
+
+# Dependencies
+node_modules/
+
+# Public static assets (optional, depends on project)
+public/
+
+# File types to ignore
 *.esm.js
 *.tsbuildinfo
-.next/*
-out/*
-coverage/*
 *.lock
