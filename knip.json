@@ -5,6 +5,7 @@
     "ignoreDependencies": [
         "eslint-config-next",
         "tailwindcss",
-        "tw-animate-css"
+        "tw-animate-css",
+        "@semantic-release/github"
     ]
 }
