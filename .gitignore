@@ -33,7 +33,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # Environment
-.env*
+.env
 
 # Vercel
 .vercel
