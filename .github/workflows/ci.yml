@@ -84,23 +84,29 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-  create-pr:
-    name: Create PR to develop
+  # Only Branches starting with 'feature/' will trigger this job
+  auto-merge:
+    name: Auto Merge to develop
     runs-on: ubuntu-latest
     needs: build
     if: startsWith(github.ref_name, 'feature/')
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout develop
+        uses: actions/checkout@v4
         with:
+          ref: develop
           fetch-depth: 0
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          source: ${{ github.ref_name }}
-          base: develop
-          title: "feat: Merge ${{ github.ref_name }} into develop"
-          body: |
-            This PR was automatically created from **${{ github.ref_name }}**
-            after all checks passed.
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Merge feature branch into develop
+        run: |
+          git fetch origin ${{ github.ref_name }}:${{ github.ref_name }}
+          git merge --no-ff ${{ github.ref_name }} -m "ci: auto-merged ${{ github.ref_name }} into develop"
+          git push origin develop
+
+      - name: Delete feature branch after merge
+        run: git push origin --delete ${{ github.ref_name }}
