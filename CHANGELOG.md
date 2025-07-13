@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/Kydollar/next-boilerplate/compare/v1.0.0...v1.1.0) (2025-07-13)
+
+
+### Features
+
+* ada main layout ([95298bb](https://github.com/Kydollar/next-boilerplate/commit/95298bb37209c490e60a8b98707cc86eaf717f21))
+* **tests:** add unit & e2e testing ([6299b7e](https://github.com/Kydollar/next-boilerplate/commit/6299b7e69100af1a812b1e39d9dbe8e670f2d852))
+
 # 1.0.0 (2025-07-11)
 
 
