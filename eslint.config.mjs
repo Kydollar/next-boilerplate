@@ -1,12 +1,12 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
+import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
-import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,12 +18,15 @@ const compat = new FlatCompat({
 
 const eslintIgnore = [
   '.git/',
-  '.next/**',
-  '.cache/**',
-  'node_modules/**',
-  'dist/**',
-  'build/**',
-  'coverage/**',
+  '.next/',
+  '.cache/',
+  'node_modules/',
+  'dist/',
+  'build/',
+  'coverage/',
+  '.swc/',
+  'out/',
+  'public/',
   '*.min.js',
   '*.config.js',
   '*.config.mjs',
@@ -80,21 +83,9 @@ const eslintConfig = [
       'react/jsx-uses-react': 'off',
 
       // Import rules
-      'import/order': [
-        'warn',
-        {
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-          alphabetize: { order: 'asc', caseInsensitive: true },
-          'newlines-between': 'always',
-          pathGroups: [
-            {
-              pattern: '@/**',
-              group: 'internal',
-            },
-          ],
-          pathGroupsExcludedImportTypes: ['builtin'],
-        },
-      ],
+      'import/order': 'off',
+      'import/no-duplicates': 'error',
+      'no-duplicate-imports': 'error',
 
       // A11y rules
       'jsx-a11y/alt-text': 'warn',
