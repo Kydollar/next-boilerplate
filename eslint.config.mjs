@@ -92,10 +92,18 @@ const eslintConfig = [
 
       // Example custom rules
       'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
 
       // TypeScript rules
       '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_', // ignore arg seperti _v
+          varsIgnorePattern: '^_', // ignore var seperti _foo
+          caughtErrorsIgnorePattern: '^_', // try-catch param
+        },
+      ],
 
       // Prettier Integration
       'prettier/prettier': [
